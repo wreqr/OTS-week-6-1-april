@@ -1,0 +1,41 @@
+macro:
+#define MAX_SIZE 100: Mendefinisikan konstanta MAX_SIZE yang memiliki nilai 100. Konstanta ini digunakan untuk menentukan ukuran maksimum dari stack yang akan digunakan dalam program.
+Struktur Data:
+struct Stack: Mendefinisikan sebuah struktur data Stack yang terdiri dari dua anggota:
+int top: Menyimpan indeks dari elemen teratas dalam stack.
+char items[MAX_SIZE]: Array untuk menyimpan elemen-elemen dalam stack.
+
+Fungsi-fungsi Stack:
+void initStack(struct Stack *s): Inisialisasi stack dengan mengatur top menjadi -1, menandakan stack kosong.
+int isEmpty(struct Stack *s): Memeriksa apakah stack kosong atau tidak.
+void push(struct Stack *s, char c): Menambahkan elemen baru ke dalam stack.
+char pop(struct Stack *s): Menghapus dan mengembalikan elemen teratas dari stack.
+char peek(struct Stack *s): Melihat elemen teratas dari stack tanpa menghapusnya.
+
+Fungsi isBalanced:
+int isBalanced(char *s): Memeriksa apakah urutan tanda kurung dalam string s seimbang atau tidak.
+Membuat stack baru.
+Melakukan iterasi pada setiap karakter dalam string s.
+Jika karakter adalah tanda kurung pembuka ((, {, [), maka karakter tersebut dimasukkan ke dalam stack.
+Jika karakter adalah tanda kurung penutup (), }, ]):
+Jika stack kosong, maka urutan tanda kurung tidak seimbang (return 0).
+Jika tanda kurung penutup tidak berpasangan dengan tanda kurung pembuka teratas dalam stack, maka urutan tanda kurung tidak seimbang (return 0).
+Setelah iterasi selesai, jika stack masih berisi elemen, maka urutan tanda kurung tidak seimbang (return 0), jika tidak, maka urutan tanda kurung seimbang (return 1).
+
+Fungsi main:
+int main(): Fungsi utama dari program.
+Mendeklarasikan array input untuk menyimpan urutan tanda kurung yang akan diperiksa.
+Meminta pengguna untuk memasukkan urutan tanda kurung.
+Membaca urutan tanda kurung dari input pengguna dan menyimpannya dalam array input.
+Memanggil fungsi isBalanced untuk memeriksa apakah urutan tanda kurung tersebut seimbang atau tidak.
+Mencetak "YES" jika urutan tanda kurung seimbang, dan "NO" jika tidak.
+
+Proses Input:
+Menggunakan fgets untuk membaca input dari pengguna.
+Menghilangkan karakter newline (\n) dari input menggunakan strcspn dan menggantinya dengan null terminator ('\0').
+Program ini akan mencetak "YES" jika urutan tanda kurung yang dimasukkan seimbang, dan "NO" jika tidak seimbang.
+
+
+
+
+
